@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adikesava Reddy | Full Stack Developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #2e2e2e, #1c1c1c);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      box-shadow: 0 0 15px #00ffcc;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background: #222;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      padding: 10px 20px;
+      border: none;
+      background: #00ffcc;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 10px;
+      transform: perspective(600px) rotateY(5deg);
+    }
+
+    nav button:hover {
+      background: #00e6b8;
+      transform: scale(1.1) rotateY(-5deg);
+    }
+
+    .section {
+      display: none;
+      padding: 40px;
+      text-align: center;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .card {
+      background: #333;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 800px;
+      box-shadow: 0 0 30px #00ffcc;
+      transform: perspective(800px) rotateY(-2deg);
+      transition: transform 0.5s;
+    }
+
+    .card:hover {
+      transform: perspective(800px) rotateY(2deg);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Adikesava Reddy – Full Stack Developer</header>
+
+  <nav>
+    <button onclick="showSection('about')">About Me</button>
+    <button onclick="showSection('education')">Education</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('certifications')">Certifications</button>
+    <button onclick="showSection('contact')">Contact Info</button>
+  </nav>
+
+  <div id="about" class="section active">
+    <div class="card">
+      <h2>About Me</h2>
+      <img src="https://source.unsplash.com/800x300/?developer" alt="About Image" />
+      <p>I am a passionate full stack developer with a strong foundation in backend development using Java. I enjoy solving complex problems and building efficient systems. I am actively seeking an entry-level role to apply my skills and grow in a dynamic environment.</p>
+      <p>I specialize in creating scalable web apps and have experience with frontend and backend technologies. I also enjoy learning about cloud infrastructure and AI-related projects.</p>
+    </div>
+  </div>
+
+  <div id="education" class="section">
+    <div class="card">
+      <h2>Education</h2>
+      <p><strong>B.E. in Computer Science</strong><br>SIMATS Engineering College, 2021–2024<br>CGPA: 8.0</p>
+      <p><strong>Intermediate (MPC)</strong><br>Narayana Junior College, 2019–2021<br>Percentage: 90%</p>
+      <p><strong>SSC</strong><br>Sai Baba High School, 2018–2019<br>GPA: 9.8</p>
+    </div>
+  </div>
+
+  <div id="skills" class="section">
+    <div class="card">
+      <h2>Technical Skills</h2>
+      <p><strong>Languages:</strong> Java, Python, HTML, CSS, JavaScript, SQL</p>
+      <p><strong>Frameworks:</strong> Spring Boot</p>
+      <p><strong>Databases:</strong> MySQL</p>
+      <p><strong>Concepts:</strong> OOP, Data Structures, JDBC, Servlets, Collections, Java 8 Features</p>
+    </div>
+  </div>
+
+  <div id="projects" class="section">
+    <div class="card">
+      <h2>Detecting Emotional State using Smartphone Data</h2>
+      <img src="https://source.unsplash.com/800x300/?emotion,ai" alt="Emotion Project">
+      <p>Uses OpenCV and Flask to capture facial emotions in real time and display them in a web app. Trained on facial expression datasets with TensorFlow/Keras.</p>
+    </div>
+    <div class="card">
+      <h2>Library Management System</h2>
+      <img src="https://source.unsplash.com/800x300/?library,books" alt="Library Project">
+      <p>A Java-MySQL system for managing borrowing, returns, book stock, and reporting for libraries with user authentication.</p>
+    </div>
+    <div class="card">
+      <h2>Random Password Generator</h2>
+      <img src="https://source.unsplash.com/800x300/?cybersecurity,code" alt="Password Project">
+      <p>Web app that generates secure, randomized passwords using different character sets. Includes copy-to-clipboard functionality.</p>
+    </div>
+    <div class="card">
+      <h2>Weather Forecast App</h2>
+      <img src="https://source.unsplash.com/800x300/?weather,forecast" alt="Weather Project">
+      <p>JavaScript app using an open API to provide real-time weather data based on user location or search input.</p>
+    </div>
+  </div>
+
+  <div id="certifications" class="section">
+    <div class="card">
+      <h2>Certifications</h2>
+      <p><strong>AWS Solutions Architecture – Forage (Apr 2025)</strong><br>Created a scalable cloud-based architecture using AWS Elastic Beanstalk.</p>
+      <p><strong>Accenture Developer Program – Forage (Apr 2025)</strong><br>Completed modules on SDLC, Agile vs Waterfall, Python debugging, and tech design.</p>
+      <p><strong>JP Morgan Virtual Internship – Forage</strong><br>Worked with data visualization and simulated client communications in a fintech setting.</p>
+    </div>
+  </div>
+
+  <div id="contact" class="section">
+    <div class="card">
+      <h2>Contact Info</h2>
+      <p><strong>Email:</strong> adhikesavareddy11318@gmail.com</p>
+      <p><strong>Mobile:</strong> +91-8341716241</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/peddu-adikesava/" target="_blank">View Profile</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/adikesava1312/Portfolio-Web-Application" target="_blank">Visit Repo</a></p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
